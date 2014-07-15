@@ -15,30 +15,29 @@
   </head>
   <body>
 
-    <div class="hero-unit">
-      <h1>'Allo, 'Allo!</h1>
-      <p>You now have</p>
-      <ul>
-        <li>HTML5 Boilerplate</li>
-        <li>Normalize CSS</li>
+<h1>Big Todo</h1>
 
-        <li>Sass</li>
+<form id="add_task">
 
-
-        <li>Modernizr</li>
-
-
-        <li>Bourbon & Neat</li>
-
-
-        <li>UnderscoreJS</li>
-
-      </ul>
-      <p>Don't forget to update your readme file!!</p>
-    </div>
+<input id="new_task" placeholder="What todo?" autofocus>
+<button>submit</button>
+</form>
 
     <script src="scripts/vendor.js"></script>
 
         <script src="scripts/main.js"></script>
+
+<script id="todo_container" type="x-handlebars-template">
+
+      {{#each todoList}}
+        <ul id="todo_template">
+          {{task}}
+        </ul>
+      {{/each}}
+</script>
+
+<div class="todo_list">
+</div>
+
 </body>
 </html>
