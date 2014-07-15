@@ -19,41 +19,43 @@
 
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="../bower_components/modernizr/modernizr.js"></script>
+
     <!-- endbuild -->
   </head>
   <body>
 
-    <div class="hero-unit">
-      <h1>'Allo, 'Allo!</h1>
-      <p>You now have</p>
-      <ul>
-        <li>HTML5 Boilerplate</li>
-        <li>Normalize CSS</li>
+<h1>Big Todo</h1>
 
-        <li>Sass</li>
+<form id="add_task">
 
-
-        <li>Modernizr</li>
-
-
-        <li>Bourbon & Neat</li>
-
-
-        <li>UnderscoreJS</li>
-
-      </ul>
-      <p>Don't forget to update your readme file!!</p>
-    </div>
+<input id="new_task" placeholder="What todo?" autofocus>
+<button>submit</button>
+</form>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/underscore/underscore.js"></script>
+    <script src="../bower_components/backbone/backbone.js"></script>
+    <script src="../bower_components/handlebars/handlebars.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js scripts/main.js -->
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
+
+<script id="todo_template" type="x-handlebars-template">
+
+      {{#each todoList}}
+        <ul class="add_class">
+          {{task}}
+        </ul>
+      {{/each}}
+</script>
+
+<div class="todo_list">
+</div>
+
 </body>
 </html>
