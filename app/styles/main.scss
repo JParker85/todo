@@ -5,22 +5,35 @@
 // Custom Styles
 body {
   background: #fafafa;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333;
+  font-family: 'Shadows Into Light', cursive;  color: #333;
+  font-size: 1.75em;
 }
 
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 600px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
-  h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
+.container{
+  height:500px;
+  max-width:35%;
+  margin:200px auto 0 auto;
+  background-color:#F0F58C;
+  box-shadow:5px 5px 5px ;
+
+}
+
+.formAlign{
+  text-align:center;
+}
+
+span:hover {
+  color:#C9452E;
+  margin-right:0;
+}
+
+.removeTask{
+float:right;
+}
+
+.todo_list ul{
+  width:90%;
+  //margin: 10px;
+  list-style-type: none;
+  float:left;
 }

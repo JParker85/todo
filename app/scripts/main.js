@@ -55,13 +55,27 @@ $(document).ready(function() {
     $('.todo_list').append(todoView.render().$el);
     // 1. Wait for the submit button is presedded
     $('#add_task').submit(function(event){
-        var todo = new Todo();
+        var todo = new Todo(),
+          $newTask = $('#new_task');
         // 2 Set and save the task in the todo on the server
-        todo.set('task', $('#new_task').val());
+        todo.set('task', $newTask.val());
         todo.save();
         // 3 add it to the list
         todoList.add(todo);
-        return false;
+        $newTask.val('');
+        event.preventDefault();
+
       });
+
+    $('.todo_list').on('click','.removeTask',function() {
+      var $this = $(this),
+        id = $this.data('id'),
+        todo = todoList.get(id);
+
+      $this.parent().remove();
+
+      todo.destroy();
+    });
+
+
  })
-//task: $('#new_task').val()

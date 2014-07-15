@@ -5,6 +5,9 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <title>todo</title>
+
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- build:css styles/vendor.css -->
@@ -23,14 +26,15 @@
     <!-- endbuild -->
   </head>
   <body>
-
+<div class = "container">
+<div class = formAlign>
 <h1>Big Todo</h1>
-
 <form id="add_task">
 
 <input id="new_task" placeholder="What todo?" autofocus>
 <button>submit</button>
 </form>
+</div>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
@@ -46,16 +50,17 @@
         <!-- endbuild -->
 
 <script id="todo_template" type="x-handlebars-template">
-
+      <ul>
       {{#each todoList}}
-        <ul class="add_class">
-          {{task}}
-        </ul>
+        <li class="add_class">
+          {{task}}<span data-id ="{{_id}}" class = "removeTask"> <i class="fa fa-times"></i></span>
+        </li>
       {{/each}}
+      </ul>
 </script>
 
 <div class="todo_list">
 </div>
-
+</div>
 </body>
 </html>
