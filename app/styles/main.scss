@@ -10,16 +10,20 @@ body {
 }
 
 .container{
-  height:500px;
+  height:600px;
   max-width:35%;
-  margin:200px auto 0 auto;
+  margin:100px auto 0 auto;
   background-color:#F0F58C;
   box-shadow:5px 5px 5px ;
-
+  background-color:#F0F58C;
 }
 
 .formAlign{
   text-align:center;
+
+  h1:{
+    border-bottom: red;
+  }
 }
 
 span:hover {
