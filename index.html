@@ -5,39 +5,62 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <title>todo</title>
+
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <link rel="stylesheet" href="styles/vendor.css">
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
 
+    <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
 
-    <script src="scripts/vendor/modernizr.js"></script>
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="../bower_components/modernizr/modernizr.js"></script>
+
+    <!-- endbuild -->
   </head>
   <body>
-
+<div class = "container">
+<div class = formAlign>
 <h1>Big Todo</h1>
+<form class="add_task">
 
-<form id="add_task">
-
-<input id="new_task" placeholder="What todo?" autofocus>
+<input class="new_task" placeholder="What todo?" autofocus>
 <button>submit</button>
 </form>
+</div>
 
-    <script src="scripts/vendor.js"></script>
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/underscore/underscore.js"></script>
+    <script src="../bower_components/backbone/backbone.js"></script>
+    <script src="../bower_components/handlebars/handlebars.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
 
+        <!-- build:js scripts/main.js -->
         <script src="scripts/main.js"></script>
+        <!-- endbuild -->
 
-<script id="todo_container" type="x-handlebars-template">
+<script class="todo_template" type="x-handlebars-template">
 
       {{#each todoList}}
-        <ul id="todo_template">
-          {{task}}
-        </ul>
+        <div class="add_class">
+          {{task}}<span data-id ="{{_id}}" class = "removeTask"> <i class="fa fa-times"></i></span>
+        </div>
       {{/each}}
+
 </script>
 
 <div class="todo_list">
 </div>
-
+</div>
 </body>
 </html>
