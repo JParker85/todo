@@ -2,28 +2,43 @@
 @import '../../bower_components/bourbon/dist/bourbon';
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
+
+$mobile: new-breakpoint(max-width 320px 1);
+
 // Custom Styles
 body {
+  @include outer-container;
+
   background: #fafafa;
   font-family: 'Shadows Into Light', cursive;  color: #333;
-  font-size: 1.75em;
+  letter-spacing: 1.5px; 
+  font-size: 2em;
+  @media screen and (max-width: 320px){
+    font-size: 1em;
+  }
 }
 
 .container{
+  @include span-columns(6);
+    @include shift(3);
+  @include media($mobile) {
+    @include span-columns(6);
+      @include shift(0);
+    }
   height:600px;
-  max-width:35%;
-  margin:100px auto 0 auto;
   background-color:#F0F58C;
   box-shadow:5px 5px 5px ;
-  background-color:#F0F58C;
+  @media screen and (max-width: 320px){
+    max-width: 320px;
+  }
 }
-
 .formAlign{
   text-align:center;
 
-  h1:{
-    border-bottom: red;
-  }
+}
+
+input{
+  width: 75%;
 }
 
 span:hover {
@@ -32,12 +47,18 @@ span:hover {
 }
 
 .removeTask{
-float:right;
+  float:right;
 }
 
-.todo_list ul{
+.todo_list{
+  margin-top:20px;
+}
+
+.add_class{
   width:90%;
-  //margin: 10px;
-  list-style-type: none;
+  margin-left: 35px;
   float:left;
+  @media screen and (max-width: 320px){
+    margin-left: 10px;
+  }
 }

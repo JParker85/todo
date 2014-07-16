@@ -35,7 +35,7 @@ var TodoView = Backbone.View.extend({
 
     render: function(){
       //5 Identifing the HTML source for the template
-      var source = $('#todo_template').html();
+      var source = $('.todo_template').html();
       //6 compiling to the template
       var template = Handlebars.compile(source);
       //7 rendering tthe template to the HTML
@@ -54,9 +54,9 @@ var todoView = new TodoView ({
 $(document).ready(function() {
     $('.todo_list').append(todoView.render().$el);
     // 1. Wait for the submit button is presedded
-    $('#add_task').submit(function(event){
+    $('.add_task').submit(function(event){
         var todo = new Todo(),
-          $newTask = $('#new_task');
+          $newTask = $('.new_task');
         // 2 Set and save the task in the todo on the server
         todo.set('task', $newTask.val());
         todo.save();
@@ -79,31 +79,3 @@ $(document).ready(function() {
 
 
  })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 

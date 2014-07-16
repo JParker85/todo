@@ -29,9 +29,9 @@
 <div class = "container">
 <div class = formAlign>
 <h1>Big Todo</h1>
-<form id="add_task">
+<form class="add_task">
 
-<input id="new_task" placeholder="What todo?" autofocus>
+<input class="new_task" placeholder="What todo?" autofocus>
 <button>submit</button>
 </form>
 </div>
@@ -49,14 +49,14 @@
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 
-<script id="todo_template" type="x-handlebars-template">
-      <ul>
+<script class="todo_template" type="x-handlebars-template">
+
       {{#each todoList}}
-        <li class="add_class">
+        <div class="add_class">
           {{task}}<span data-id ="{{_id}}" class = "removeTask"> <i class="fa fa-times"></i></span>
-        </li>
+        </div>
       {{/each}}
-      </ul>
+
 </script>
 
 <div class="todo_list">
