@@ -3,7 +3,7 @@
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
 
-$mobile: new-breakpoint(max-width 320px 1);
+$mobile: new-breakpoint(max-width 360px 1);
 
 // Custom Styles
 body {
@@ -13,7 +13,7 @@ body {
   font-family: 'Shadows Into Light', cursive;  color: #333;
   letter-spacing: 1.5px;
   font-size: 2em;
-  @media screen and (max-width: 320px){
+  @media screen and (max-width: 360px){
     font-size: 1em;
   }
 }
@@ -28,7 +28,7 @@ body {
   height:700px;
   background-color:#F0F58C;
   box-shadow:5px 5px 5px ;
-  @media screen and (max-width: 320px){
+  @media screen and (max-width: 360px){
     max-width: 320px;
   }
 }
@@ -58,7 +58,7 @@ span:hover {
   width:90%;
   margin-left: 35px;
   float:left;
-  @media screen and (max-width: 320px){
+  @media screen and (max-width: 360px){
     margin-left: 10px;
   }
 }
