@@ -79,3 +79,16 @@ $(document).ready(function() {
 
 
  })
+
+ var AppRouter = Backbone.Router.extend({
+     routes: {
+       '':'showTodos'
+     },
+     showTodos: function(){
+       var todoView = new TodoView();
+     }
+ })
+
+
+ new AppRouter();
+ Backbone.history.start();
