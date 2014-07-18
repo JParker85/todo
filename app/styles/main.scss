@@ -9,7 +9,7 @@ $mobile: new-breakpoint(max-width 360px 1);
 body {
   @include outer-container;
 
-  background: #fafafa;
+background-image: url(http://cl.ly/image/3w02430E2z0k/6376513135_2acc82dd87_b.jpg);
   font-family: 'Shadows Into Light', cursive;  color: #333;
   letter-spacing: 1.5px;
   font-size: 2em;
@@ -30,6 +30,7 @@ body {
   box-shadow:5px 5px 5px ;
   @media screen and (max-width: 360px){
     max-width: 360px;
+    margin: auto;
   }
 }
 .formAlign{
