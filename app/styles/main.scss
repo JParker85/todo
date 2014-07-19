@@ -25,9 +25,10 @@ background-image: url(http://cl.ly/image/3w02430E2z0k/6376513135_2acc82dd87_b.jp
     @include span-columns(6);
       @include shift(0);
     }
-  height:700px;
   background-color:#F0F58C;
   box-shadow:5px 5px 5px ;
+  height:100%;
+  margin-top: 25px;
   @media screen and (max-width: 360px){
     max-width: 360px;
     margin: auto;
@@ -37,10 +38,10 @@ background-image: url(http://cl.ly/image/3w02430E2z0k/6376513135_2acc82dd87_b.jp
   text-align:center;
   img{
     height: 20px;
-    margin-top:40px;
+    margin-top:25px;
   }
   h1{
-    margin-top: 0;
+    margin-top: 10px;
   }
   @media screen and (max-width: 360px){
     img{
@@ -50,7 +51,7 @@ background-image: url(http://cl.ly/image/3w02430E2z0k/6376513135_2acc82dd87_b.jp
 }
 
 input{
-  width: 75%;
+  width: 90%;
 }
 
 span:hover {
